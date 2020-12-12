@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/hosp11"
+    tools:context="com.vidya.navigationdrawer.LoginActivity">
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/progress_login"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/form_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="outsideOverlay"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_user_name"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/maroon"
+                app:counterTextColor="@color/maroon"
+                android:textStyle="bold"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/login_user_name_hint"
+                    android:imeOptions="actionNext"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:backgroundTint="@color/maroon"
+                    android:textColor="@color/maroon"
+                    android:textColorHint="@color/maroon"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/maroon"
+                app:counterTextColor="@color/maroon"
+                android:textStyle="bold"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/tv_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/login_user_name_password"
+                    android:imeActionLabel="@string/action_sign_in"
+                    android:imeOptions="actionDone"
+                    android:backgroundTint="@color/maroon"
+                    android:textColor="@color/maroon"
+                    android:textColorHint="@color/maroon"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_email_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/maroon"
+                app:counterTextColor="@color/maroon"
+                android:textStyle="bold"
+                app:passwordToggleEnabled="false">
+            <EditText
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_hint"
+                android:backgroundTint="@color/maroon"
+                android:textColor="@color/maroon"
+                android:textColorHint="@color/maroon"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/maroon"
+                app:counterTextColor="@color/maroon"
+                android:textStyle="bold"
+                app:passwordToggleEnabled="false">
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Phone_hint"
+                android:ems="10"
+                android:backgroundTint="@color/maroon"
+                android:textColor="@color/maroon"
+                android:textColorHint="@color/maroon"
+                android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/btn_login"
+                style="?android:textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+                android:padding="16dp"
+                android:text="@string/action_Register"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/maroon"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
